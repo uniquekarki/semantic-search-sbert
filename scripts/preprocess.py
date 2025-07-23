@@ -10,6 +10,4 @@ df = df.rename(columns={'1_x':'summary', 2:'name'})
 
 df['cleaned_summary'] = df['summary'].apply(lambda x: x.lower().strip())
 
-df = df.drop('summary', axis=1)
-
 df.to_csv('../dataset/preprocessed_data.csv', index=False)
